@@ -66,7 +66,13 @@ Matrix scale_matrix(Matrix a, double k)
 Matrix transpose_matrix(Matrix a)
 {
     // ToDo
-    return create_matrix(0, 0);
+    Matrix m;
+    for(int i=0,i<=a.row,i++){
+        for(int j=0,j<=a.col,j++){
+            m.data[i][j]=a.data[j][i];
+        }
+    }
+    return m;
 }
 
 double det_matrix(Matrix a)
