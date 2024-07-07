@@ -14,20 +14,41 @@ Matrix add_matrix(Matrix a, Matrix b)
 {
     // ToDo
     Matrix m;
-    
-    return create_matrix(0, 0);
+    for(int i=0,i<=a.row,i++){
+        for(int j=0,j<=a.col,j++){
+            m.data[i][j]=a.data[i][j]+b.data[i][j];
+        }
+    }
+    return m;
 }
 
 Matrix sub_matrix(Matrix a, Matrix b)
 {
     // ToDo
-    return create_matrix(0, 0);
+        Matrix m;
+    for(int i=0,i<=a.row,i++){
+        for(int j=0,j<=a.col,j++){
+            m.data[i][j]=a.data[i][j]-b.data[i][j];
+        }
+    }
+    return m;
 }
 
 Matrix mul_matrix(Matrix a, Matrix b)
 {
     // ToDo
-    return create_matrix(0, 0);
+    Matrix m;
+    for(int i=0,i<=a.row,i++){
+        for(int j=0,j<=b.col,j++){
+            m.data.[i][j]=0;
+            for(int x=0,x<=a.col,x++){
+                for(int y=0,y<=b.cow,y++){
+                    m.data[i][j]=m.data[i][j]+a.data[i][x]*b.data[y][j];
+                }
+            }
+        }
+    }
+    return m;
 }
 
 Matrix scale_matrix(Matrix a, double k)
