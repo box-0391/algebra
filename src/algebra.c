@@ -54,7 +54,13 @@ Matrix mul_matrix(Matrix a, Matrix b)
 Matrix scale_matrix(Matrix a, double k)
 {
     // ToDo
-    return create_matrix(0, 0);
+    Matrix m;
+    for(int i=0,i<=a.row,i++){
+        for(int j=0,j<=a.col,j++){
+            m.data[i][j]=k*a.data[i][j];
+        }
+    }
+    return m;
 }
 
 Matrix transpose_matrix(Matrix a)
